@@ -1,0 +1,22 @@
+[
+  {
+    "model": "configurator.component",
+    "pk": 1,
+    "fields": {
+      "name": "Geforce RTX 4090",
+      "brand": 1,
+      "price": 989.90,
+      "type": "videocard"
+    }
+  },
+  {
+   "model": "configurator.component",
+    "pk": 2,
+    "fields": {
+      "name": "Intel Core i100",
+      "brand": 2,
+      "price": 149.99,
+      "type": "cpu"
+    }
+  }
+]

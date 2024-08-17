@@ -1,0 +1,16 @@
+[
+  {
+    "model": "configurator.brand",
+    "pk": 1,
+    "fields": {
+      "name": "Asus"
+    }
+  },
+  {
+    "model": "configurator.brand",
+    "pk": 2,
+    "fields": {
+      "name": "Intel"
+    }
+  }
+]
