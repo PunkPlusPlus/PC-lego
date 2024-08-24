@@ -1,5 +1,4 @@
 from django.db import models
-from .interface import ComponentType
 
 
 class CPU(models.Model):
@@ -8,7 +7,7 @@ class CPU(models.Model):
     cores = models.IntegerField()
     thread = models.IntegerField()
     power = models.CharField(max_length=100)
-    price = models.DecimalField(decimal_places=6, max_digits=2)
+    price = models.DecimalField(decimal_places=2, max_digits=6)
     company = models.CharField(max_length=100)
 
 
@@ -18,7 +17,7 @@ class GPU(models.Model):
     cores = models.IntegerField()
     thread = models.IntegerField()
     power = models.CharField(max_length=100)
-    price = models.DecimalField(decimal_places=6, max_digits=2)
+    price = models.DecimalField(decimal_places=2, max_digits=6)
     company = models.CharField(max_length=100)
 
 
@@ -26,7 +25,7 @@ class Motherboard(models.Model):
     name = models.CharField(max_length=100)
     socket = models.CharField(max_length=100)
     chipset = models.CharField(max_length=100)
-    price = models.DecimalField(decimal_places=6, max_digits=2)
+    price = models.DecimalField(decimal_places=2, max_digits=6)
     company = models.CharField(max_length=100)
 
 
@@ -34,7 +33,7 @@ class RAM(models.Model):
     name = models.CharField(max_length=100)
     volume = models.CharField(max_length=100)
     type = models.CharField(max_length=100)
-    price = models.DecimalField(decimal_places=6, max_digits=2)
+    price = models.DecimalField(decimal_places=2, max_digits=6)
     company = models.CharField(max_length=100)
 
 
@@ -42,28 +41,28 @@ class StorageDrive(models.Model):
     name = models.CharField(max_length=100)
     volume = models.CharField(max_length=100)
     type = models.CharField(max_length=100)
-    price = models.DecimalField(decimal_places=6, max_digits=2)
+    price = models.DecimalField(decimal_places=2, max_digits=6)
     company = models.CharField(max_length=100)
 
 
 class PowerSupply(models.Model):
     name = models.CharField(max_length=100)
     power = models.CharField(max_length=100)
-    price = models.DecimalField(decimal_places=6, max_digits=2)
+    price = models.DecimalField(decimal_places=2, max_digits=6)
     company = models.CharField(max_length=100)
 
 
 class CoolingSystem(models.Model):
     name = models.CharField(max_length=100)
     destination = models.CharField(max_length=100)
-    price = models.DecimalField(decimal_places=6, max_digits=2)
+    price = models.DecimalField(decimal_places=2, max_digits=6)
     company = models.CharField(max_length=100)
 
 
 class Case(models.Model):
     name = models.CharField(max_length=100)
     proportions = models.CharField(max_length=100)
-    price = models.DecimalField(decimal_places=6, max_digits=2)
+    price = models.DecimalField(decimal_places=2, max_digits=6)
     company = models.CharField(max_length=100)
 
 
@@ -77,5 +76,5 @@ class AssemblerPC(models.Model):
     power_supply = models.ForeignKey(PowerSupply, on_delete=models.CASCADE)
     cooling_system = models.ForeignKey(CoolingSystem, on_delete=models.CASCADE)
     case = models.ForeignKey(Case, on_delete=models.CASCADE)
-    price_all = models.DecimalField(decimal_places=6, max_digits=2)
-    user_score = models.DecimalField(decimal_places=6, max_digits=2)
+    price_all = models.DecimalField(decimal_places=2, max_digits=6)
+    user_score = models.DecimalField(decimal_places=2, max_digits=6)
