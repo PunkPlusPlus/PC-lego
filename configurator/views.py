@@ -1,19 +1,13 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
-from configurator.forms import ComponentForm
-from configurator.models import Component, Brand
 
 
-def create_component(request):
-    if request.method == 'POST':
-        data = ComponentForm(request.POST)
-        if data.is_valid():
-            component = Component()
-            component.name = data.cleaned_data['name']
-            component.brand, created = Brand.objects.get_or_create(name=data.cleaned_data['brand'])
-            component.price = data.cleaned_data['price']
-            component.type = data.cleaned_data['type']
-            component.save()
+def components(request):
+    return render(request, 'configurator/components.html')
 
-    form = ComponentForm()
-    return render(request, 'index.html', {'form': form})
+
+def matching_table(request):
+    return render(request, 'configurator/matching_table.html')
+
+
+def assembly_pc(request):
+    return render(request, 'configurator/assembly_pc.html')
