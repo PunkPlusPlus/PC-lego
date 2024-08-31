@@ -1,0 +1,39 @@
+aside {
+    float: left;
+    background: #222;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+
+main {
+    float: left;
+    margin-top: 50px;
+    text-align: center;
+    width: 75%;
+}
+
+img {
+    width: 400px;
+    float: left;
+}
+
+div.card.mb-3 {
+    width: 400px;
+}
+
+.container {
+    display: flex;
+    padding: 100px;
+    grid-gap: 100px;
+}
+
+
+.assembler-form {
+    margin-top: 100px;
+    margin-left: 100px;
+    text-align: center;
+
+}

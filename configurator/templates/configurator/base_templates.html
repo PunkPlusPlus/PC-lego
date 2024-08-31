@@ -1,26 +1,45 @@
-<!DOCTYPE html>
+{% load static %}
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'configurator/css/base_templates.css' %}">
 </head>
 <body>
-    <div class="container">
-        {% block content %}{% endblock %}
-        <p1>Процессоры</p1>
-        <p2>Материнские платы</p2>
-        <p3>Оперативная память</p3>
-        <p4>Видеокарты</p4>
-        <p5>Жесткие диски</p5>
-        <p6>Твердотельные накопители</p6>
-        <p7>Блоки питания</p7>
-        <p8>Система охлаждения</p8>
-        <p9>Корпуса</p9>
-        <p10>Мониторы</p10>
-        <p11>Клавиатуры</p11>
-        <p12>Мыши</p12>
-        <p13>Наушники</p13>
-    </div>
+    <aside>
+        <div class="list-group">
+          <a href="" class="list-group-item list-group-item-action">Готовые сборки</a>
+          <a href="{% url 'home_page' %}" class="list-group-item list-group-item-action">Сборщик ПК</a>
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-dark d-flex justify-content-between align-items-center">
+            Комплектующие ПК
+            </li>
+          </ul>
+          <a href="" class="list-group-item list-group-item-action">Процессоры</a>
+          <a href="" class="list-group-item list-group-item-action">Материнские платы</a>
+          <a href="" class="list-group-item list-group-item-action">Оперативная память</a>
+          <a href="" class="list-group-item list-group-item-action">Видеокарты</a>
+          <a href="" class="list-group-item list-group-item-action">Жесткие диски</a>
+          <a href="" class="list-group-item list-group-item-action">Твердотельные накопители</a>
+          <a href="" class="list-group-item list-group-item-action">Блоки питания</a>
+          <a href="" class="list-group-item list-group-item-action">Система охлаждения</a>
+          <a href="" class="list-group-item list-group-item-action">Корпуса</a>
+        </div>
 
+    </aside>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
 </body>
 </html>
+
+
+
+
+

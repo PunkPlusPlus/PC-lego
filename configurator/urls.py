@@ -2,7 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('components', views.components, name='components'),
-    path('matching_table', views.matching_table, name='matching_table'),
-    path('assembly_pc', views.assembly_pc, name='assembly_pc'),
+    path('', views.HomePageView.as_view(), name='home_page'),
+    path('assemblerPC', views.AssemblerPCView.as_view(), name='assembler_PC')
 ]

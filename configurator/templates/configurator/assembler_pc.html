@@ -1,0 +1,16 @@
+{% extends 'configurator/base_templates.html' %}
+
+{% block title %}Сборщик ПК{% endblock %}
+
+{% block content %}
+    <div class="assembler-form">
+        <h1>Сборка ПК</h1>
+        <form method="post">
+            {% csrf_token %}<br>
+            {% for f in form %}
+                {{ f }}
+            {% endfor %}
+            <button type="button" class="btn btn-secondary">Добавить сборку</button>
+        </form>
+    </div>
+{% endblock %}

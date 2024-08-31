@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'PClego.wsgi.application'
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'postgres',
-       'USER': 'postgres',
+       'NAME': 'PC',
+       'USER': 'admin',
        'PASSWORD': 'admin',
        'HOST': 'localhost',
-       'PORT': '5432',
+       'PORT': '5431',
    }
 }
 
