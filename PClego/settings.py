@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'parser',
     'configurator',
     'users'
 ]
@@ -81,11 +80,11 @@ WSGI_APPLICATION = 'PClego.wsgi.application'
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'PC',
-       'USER': 'admin',
+       'NAME': 'postgres',
+       'USER': 'postgres',
        'PASSWORD': 'admin',
        'HOST': 'localhost',
-       'PORT': '5431',
+       'PORT': '5432',
    }
 }
 
