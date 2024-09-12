@@ -1,5 +1,5 @@
 from .models import AssemblerPC
-from django.forms import ModelForm, TextInput
+from django.forms import ModelForm, TextInput, Select
 
 class ConfiguratorForm(ModelForm):
     class Meta:
@@ -8,7 +8,7 @@ class ConfiguratorForm(ModelForm):
                   'cooling_system', 'case', 'price_all', 'user_score']
 
         widgets = {
-            'name': TextInput(attrs={
+            'name': Select(attrs={
                 'class': "form-control",
                 'placeholder': "Название сборки",
             }),

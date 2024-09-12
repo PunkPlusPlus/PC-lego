@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-92*z_+lvq*1!badt&m&^%k&2+1e&%$rlnht!py09$hx(20!i!r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -81,11 +82,11 @@ WSGI_APPLICATION = 'PClego.wsgi.application'
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'PC',
-       'USER': 'admin',
-       'PASSWORD': 'admin',
-       'HOST': 'localhost',
-       'PORT': '5431',
+       'NAME': os.getenv('POSTGRES_DB'),
+       'USER': os.getenv('POSTGRES_USER'),
+       'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+       'HOST': os.getenv('DB_HOST', 'db'),
+       'PORT': os.getenv('DB_PORT'),
    }
 }
 
