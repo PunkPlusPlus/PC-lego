@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, FormView
+from django.views.generic import TemplateView, FormView, ListView
 from .forms import ConfiguratorForm
 from django.urls import reverse_lazy
+from configurator.models import AssemblerPC
 
 
 class HomePageView(TemplateView):
@@ -21,4 +22,7 @@ class AssemblerPCView(FormView):
         pass
 
 
-
+class PCList(ListView):
+    model = AssemblerPC
+    template_name = 'configurator/PCList.html'
+    paginate_by = 2
