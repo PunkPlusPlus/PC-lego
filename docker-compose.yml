@@ -21,6 +21,7 @@ services:
       - db
     env_file:
       - .env
+    restart: on-failure
 
 volumes:
   postgres_data:
