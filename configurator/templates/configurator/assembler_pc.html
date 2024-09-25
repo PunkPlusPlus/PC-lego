@@ -1,4 +1,5 @@
 {% extends 'configurator/base_templates.html' %}
+{% load static %}
 
 {% block title %}Сборщик ПК{% endblock %}
 
@@ -17,4 +18,6 @@
             <button type="reset" class="btn btn-light">Сбросить</button>
         </form>
     </div>
+    <script src="{% static 'configurator/js/type_pc.js' %}"></script>
+    <script src="{% static 'configurator/js/total_price.js' %}"></script>
 {% endblock %}
