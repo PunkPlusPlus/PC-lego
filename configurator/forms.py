@@ -5,7 +5,6 @@ from .models import CPU, GPU, Motherboard, RAM, StorageDrive, PowerSupply, Cooli
 class ConfiguratorForm(Form):
     name = CharField(label='Название сборки', max_length=100)
     type = ChoiceField(label='Тип сборки', required=True, choices={"game": "Игровой", "office": "Офисный"})
-    # type = ModelChoiceField(queryset=TypePC.objects.all(), label='Тип сборки', required=True, blank=True)
     cpu = ModelChoiceField(queryset=CPU.objects.all(), label='Процессор', empty_label='Выберите процессор', required=False)
     gpu = ModelChoiceField(queryset=GPU.objects.all(), label='Видеокарта', empty_label='Выберите видеокарту', required=False)
     motherboard = ModelChoiceField(queryset=Motherboard.objects.all(), label='Материнская плата', empty_label='Выберите материнскую плату', required=False)
