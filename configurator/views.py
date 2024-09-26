@@ -3,6 +3,8 @@ from .forms import ConfiguratorForm
 from django.urls import reverse_lazy
 from configurator.models import AssemblerPC, CPU, GPU, Motherboard, RAM, StorageDrive, PowerSupply, CoolingSystem, Case
 from django.http import HttpResponse
+from rest_framework import viewsets
+from configurator.serializers import CpuSerializer
 
 
 class HomePageView(TemplateView):
@@ -38,6 +40,11 @@ def get_price(request):
         price = models_components[model].objects.get(id=id).price
         return HttpResponse(price)
     return HttpResponse('Компонент не найден', status=400)
+
+
+class ApiCpuViewSet(viewsets.ModelViewSet):
+    queryset = CPU.objects.all()
+    serializer_class = CpuSerializer
 
 
 class PCList(ListView):
