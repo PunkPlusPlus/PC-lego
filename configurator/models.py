@@ -106,3 +106,4 @@ class AssemblerPC(models.Model):
     type_pc = models.ForeignKey(TypePC, on_delete=models.CASCADE)
     price_all = models.DecimalField(decimal_places=2, max_digits=8, verbose_name="Цена за сборку")
     user_score = models.DecimalField(decimal_places=2, max_digits=8, verbose_name="Рейтинг")
+

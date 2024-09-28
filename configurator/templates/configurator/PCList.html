@@ -7,15 +7,31 @@
 
 {% block content %}
  <h2 class="pclist-header">Computers</h2>
-    <table class="pclist">
+    
+    <div class="pc-list">
         {% for computer in object_list %}
-            <tr>
-                <td>{{ computer.name }}</td>
-            {% empty %}
-                <td>No computers built. Sad!</td>
-            {% endfor %}
-            </tr>
-    </table>
+            <div class="card pc-card" style="width: 18rem;">
+              <img src="{% static 'configurator/image/computer_placeholder.png' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{ computer.name }}</h5>
+                  <p class="card-text">Цена: <b>{{ computer.price_all }}</b></p>
+                  <p class="card-text">Оценка пользователей: <b>{{ computer.user_score }}</b></p>
+                <a href="#" class="btn btn-primary">Подробнее</a>
+              </div>
+            </div>
+        {% endfor %}
+    </div>
+    
+{#    <table class="pclist">#}
+{#        {% for computer in object_list %}#}
+{#            <tr>#}
+{#                <td>{{ computer.name }}</td>#}
+{#            {% empty %}#}
+{#                <td>No computers built. Sad!</td>#}
+{#            {% endfor %}#}
+{#            </tr>#}
+{#    </table>#}
+    
 <div class="pagination">
     <span class="step-links">
         {% if page_obj.has_previous %}

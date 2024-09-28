@@ -11,4 +11,5 @@ urlpatterns = [
     path('computers/', views.PCList.as_view()),
     path('api/price', views.get_price),
     path('api/', include(router.urls)),
+    path('showlist', views.ShowListPC.as_view(), name='showlist_PC')
 ]
