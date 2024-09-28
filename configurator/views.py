@@ -50,4 +50,4 @@ class ApiCpuViewSet(viewsets.ModelViewSet):
 class PCList(ListView):
     model = AssemblerPC
     template_name = 'configurator/PCList.html'
-    paginate_by = 2
+    paginate_by = 9

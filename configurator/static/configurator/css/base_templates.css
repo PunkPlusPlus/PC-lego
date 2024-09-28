@@ -30,3 +30,15 @@ div.card.mb-3 {
     grid-gap: 100px;
 }
 
+.pc-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.pc-card {
+    flex: 250px;
+    margin: 2rem;
+    max-width: 250px;
+}
+
