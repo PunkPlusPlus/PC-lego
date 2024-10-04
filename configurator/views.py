@@ -51,3 +51,7 @@ class PCList(ListView):
     model = AssemblerPC
     template_name = 'configurator/PCList.html'
     paginate_by = 9
+
+    def get_ordering(self):
+        ordering = self.request.GET.get('sort-by', '-total_price')
+        return ordering

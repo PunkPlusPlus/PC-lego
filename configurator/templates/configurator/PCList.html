@@ -6,8 +6,18 @@
 {% endblock %}
 
 {% block content %}
- <h2 class="pclist-header">Computers</h2>
-    
+<h2 class="pclist-header">Computers</h2>
+    <div class="sort_form">
+        <form method="GET">
+        <select name="sort-by" class="form-select" aria-label="Default select example"> <!-- this is the parameter name that will be in $input->get -->
+            <option selected>Sort by...</option>
+            <option value="user_score">User score</option>
+            <option value="price_all">Total price</option>
+        </select>
+        <input type="submit" value="Apply Filters" />
+        </form>
+    </div>
+
     <div class="pc-list">
         {% for computer in object_list %}
             <div class="card pc-card" style="width: 18rem;">
