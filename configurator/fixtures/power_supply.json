@@ -1,1 +1,57 @@
-[{"model": "configurator.powersupply", "pk": 1, "fields": {"name": "DQ750-M-V2L", "power": "750W", "price": "10850.00", "company": "DeepCool"}}, {"model": "configurator.powersupply", "pk": 2, "fields": {"name": "GP-P850GM", "power": "850W", "price": "11350.00", "company": "Gigabyte"}}, {"model": "configurator.powersupply", "pk": 3, "fields": {"name": "PQ1000M", "power": "1000W", "price": "16660.00", "company": "DeepCool"}}, {"model": "configurator.powersupply", "pk": 4, "fields": {"name": "Aero Bronze 750W", "power": "750W", "price": "7090.00", "company": "Aerocool"}}, {"model": "configurator.powersupply", "pk": 5, "fields": {"name": "PS-TPD-0750F3FAGE-1", "power": "750W", "price": "17890.00", "company": "Thermaltake Toughpower"}}]
+[
+{
+  "model": "configurator.powersupply",
+  "pk": 1,
+  "fields": {
+    "name": "DQ750-M-V2L",
+    "power": "750W",
+    "price": "10850.00",
+    "company": "DeepCool",
+    "type_pc": 2
+  }
+},
+{
+  "model": "configurator.powersupply",
+  "pk": 2,
+  "fields": {
+    "name": "GP-P850GM",
+    "power": "850W",
+    "price": "11350.00",
+    "company": "Gigabyte",
+    "type_pc": 2
+  }
+},
+{
+  "model": "configurator.powersupply",
+  "pk": 3,
+  "fields": {
+    "name": "PQ1000M",
+    "power": "1000W",
+    "price": "16660.00",
+    "company": "DeepCool",
+    "type_pc": 1
+  }
+},
+{
+  "model": "configurator.powersupply",
+  "pk": 4,
+  "fields": {
+    "name": "Aero Bronze 750W",
+    "power": "750W",
+    "price": "7090.00",
+    "company": "Aerocool",
+    "type_pc": 2
+  }
+},
+{
+  "model": "configurator.powersupply",
+  "pk": 5,
+  "fields": {
+    "name": "PS-TPD-0750F3FAGE-1",
+    "power": "750W",
+    "price": "17890.00",
+    "company": "Thermaltake Toughpower",
+    "type_pc": 1
+  }
+}
+]

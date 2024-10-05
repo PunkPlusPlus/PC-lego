@@ -1,10 +1,10 @@
-from django.forms import Form, ModelChoiceField, CharField, ChoiceField, FloatField
+from django.forms import Form, ModelChoiceField, CharField, FloatField
 from .models import CPU, GPU, Motherboard, RAM, StorageDrive, PowerSupply, CoolingSystem, Case, TypePC
 
 
 class ConfiguratorForm(Form):
     name = CharField(label='Название сборки', max_length=100)
-    type = ChoiceField(label='Тип сборки', required=True, choices={"game": "Игровой", "office": "Офисный"})
+    type = ModelChoiceField(queryset=TypePC.objects.all(), label='Тип сборки', empty_label='Выберите тип сборки', required=True)
     cpu = ModelChoiceField(queryset=CPU.objects.all(), label='Процессор', empty_label='Выберите процессор', required=False)
     gpu = ModelChoiceField(queryset=GPU.objects.all(), label='Видеокарта', empty_label='Выберите видеокарту', required=False)
     motherboard = ModelChoiceField(queryset=Motherboard.objects.all(), label='Материнская плата', empty_label='Выберите материнскую плату', required=False)
@@ -14,12 +14,3 @@ class ConfiguratorForm(Form):
     cooling_system = ModelChoiceField(queryset=CoolingSystem.objects.all(), label='Система охлаждения', empty_label='Выберите систему охлаждения', required=False)
     case = ModelChoiceField(queryset=Case.objects.all(), label='Корпус', empty_label='Выберите корпус', required=False)
     price_all = FloatField(label="Цена за сборку", disabled=True)
-
-
-
-    # def clean_model(self):
-    #     model_list = self.cleaned_data['cpu', 'gpu', 'motherboard', 'ram', 'storage_drive', 'power_supply',
-    #               'cooling_system', 'case']
-    #     if len(model_list) < 3:
-    #         raise ValueError('Для сохранения сборки выберите, как минимум, 3 комплектующие')
-    #     return model_list

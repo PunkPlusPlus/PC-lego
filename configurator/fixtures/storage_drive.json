@@ -1,1 +1,62 @@
-[{"model": "configurator.storagedrive", "pk": 1, "fields": {"name": "ST2000DM008", "volume": "2Tb", "type": "HDD", "price": "4790.00", "company": "Seagate Barracuda"}}, {"model": "configurator.storagedrive", "pk": 2, "fields": {"name": "HDWE160UZSVA", "volume": "6Tb", "type": "HDD", "price": "11190.00", "company": "Toshiba"}}, {"model": "configurator.storagedrive", "pk": 3, "fields": {"name": "WD10EZEX", "volume": "1Tb", "type": "HDD", "price": "3390.00", "company": "Western Digital"}}, {"model": "configurator.storagedrive", "pk": 4, "fields": {"name": "MZ-V8P1T0BW", "volume": "1Tb", "type": "SSD", "price": "13700.00", "company": "Samsung"}}, {"model": "configurator.storagedrive", "pk": 5, "fields": {"name": "WDS500G3X0C", "volume": "500Gb", "type": "SSD", "price": "11670.00", "company": "Western Digital"}}]
+[
+{
+  "model": "configurator.storagedrive",
+  "pk": 1,
+  "fields": {
+    "name": "ST2000DM008",
+    "volume": "2Tb",
+    "type": "HDD",
+    "price": "4790.00",
+    "company": "Seagate Barracuda",
+    "type_pc": 2
+  }
+},
+{
+  "model": "configurator.storagedrive",
+  "pk": 2,
+  "fields": {
+    "name": "HDWE160UZSVA",
+    "volume": "6Tb",
+    "type": "HDD",
+    "price": "11190.00",
+    "company": "Toshiba",
+    "type_pc": 1
+  }
+},
+{
+  "model": "configurator.storagedrive",
+  "pk": 3,
+  "fields": {
+    "name": "WD10EZEX",
+    "volume": "1Tb",
+    "type": "HDD",
+    "price": "3390.00",
+    "company": "Western Digital",
+    "type_pc": 2
+  }
+},
+{
+  "model": "configurator.storagedrive",
+  "pk": 4,
+  "fields": {
+    "name": "MZ-V8P1T0BW",
+    "volume": "1Tb",
+    "type": "SSD",
+    "price": "13700.00",
+    "company": "Samsung",
+    "type_pc": 1
+  }
+},
+{
+  "model": "configurator.storagedrive",
+  "pk": 5,
+  "fields": {
+    "name": "WDS500G3X0C",
+    "volume": "500Gb",
+    "type": "SSD",
+    "price": "11670.00",
+    "company": "Western Digital",
+    "type_pc": 1
+  }
+}
+]
