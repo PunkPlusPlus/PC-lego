@@ -11,27 +11,38 @@
     <link rel="stylesheet" href="{% static 'configurator/css/base_templates.css' %}">
 </head>
 <body>
-    <aside>
-        <div class="list-group">
-          <a href="" class="list-group-item list-group-item-action">Готовые сборки</a>
-          <a href="{% url 'home_page' %}" class="list-group-item list-group-item-action">Сборщик ПК</a>
-          <ul class="list-group">
-            <li class="list-group-item list-group-item-dark d-flex justify-content-between align-items-center">
-            Комплектующие ПК
-            </li>
-          </ul>
-          <a href="" class="list-group-item list-group-item-action">Процессоры</a>
-          <a href="" class="list-group-item list-group-item-action">Материнские платы</a>
-          <a href="" class="list-group-item list-group-item-action">Оперативная память</a>
-          <a href="" class="list-group-item list-group-item-action">Видеокарты</a>
-          <a href="" class="list-group-item list-group-item-action">Жесткие диски</a>
-          <a href="" class="list-group-item list-group-item-action">Твердотельные накопители</a>
-          <a href="" class="list-group-item list-group-item-action">Блоки питания</a>
-          <a href="" class="list-group-item list-group-item-action">Система охлаждения</a>
-          <a href="" class="list-group-item list-group-item-action">Корпуса</a>
-        </div>
-
-    </aside>
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'computers' %}">Готовые сборки
+            <span class="visually-hidden"></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home_page' %}">Сборщик ПК</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Комплектующие ПК</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Процессоры</a>
+            <a class="dropdown-item" href="#">Материнские платы</a>
+            <a class="dropdown-item" href="#">Оперативная память</a>
+            <a class="dropdown-item" href="#">Видеокарты</a>
+            <a class="dropdown-item" href="#">Жесткие диски</a>
+            <a class="dropdown-item" href="#">Твердотельные накопители</a>
+            <a class="dropdown-item" href="#">Блоки питания</a>
+            <a class="dropdown-item" href="#">Система охлаждения</a>
+            <a class="dropdown-item" href="#">Корпуса</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
     <main>
         {% block content %}
         {% endblock %}

@@ -13,6 +13,6 @@ typeField.addEventListener('change', function() {
     const selectedType = this.value; // Получаем выбранный тип
     if (selectedType) {
         // Перенаправляем на URL с выбранным типом
-        window.location.href = "{% url 'assembler_PC' %}?type=" + selectedType;
+        window.location.href = 'http://127.0.0.1:8000/assemblerPC/?type=' + encodeURIComponent(selectedType);
     }
 });
