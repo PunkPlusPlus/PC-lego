@@ -57,6 +57,7 @@ form {
     padding: 8px;
     box-sizing: border-box;
     background-color: #adb5bd;
+    border-radius: 4px;
 }
 
 .pc-form-field {
@@ -73,3 +74,4 @@ form {
 .btn-secondary {
     margin-right: 15px;
 }
+
