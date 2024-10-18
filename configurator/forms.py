@@ -16,7 +16,6 @@ class ConfiguratorForm(Form):
     price_all = FloatField(label="Цена за сборку", disabled=True)
 
 
-
     # def clean_model(self):
     #     model_list = self.cleaned_data['cpu', 'gpu', 'motherboard', 'ram', 'storage_drive', 'power_supply',
     #               'cooling_system', 'case']
