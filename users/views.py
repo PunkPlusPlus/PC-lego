@@ -1,17 +1,13 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic import CreateView
+from .forms import RegisterUserForm
+from django.urls import reverse_lazy
 
 
-def assembly_pc(request):
-    return render(request, 'users/assembly_pc.html')
+class RegisterUser(CreateView):
+    form_class = RegisterUserForm
+    template_name = 'users/register.html'
+    # success_url = reverse_lazy('login')
 
 
-def users(request):
-    return render(request, 'users/users.html')
-
-
-def reg_form(request):
-    username = request.POST.get('name', 'undefined')
-    email = request.POST.get('email', 'undefined')
-    password = request.POST.get('password', 'undefined')
-    return HttpResponse(f"<div>Name: {username}  Email: {email} Password: {password}<div>")
+    def form_valid(self, form):
+        return super().form_valid(form)
