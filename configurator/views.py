@@ -1,13 +1,15 @@
 from django.views.generic import TemplateView, FormView, ListView
 from .forms import ConfiguratorForm
 from django.urls import reverse_lazy
-from configurator.models import AssemblerPC, CPU, GPU, Motherboard, RAM, StorageDrive, PowerSupply, CoolingSystem, Case
+from configurator.models import AssemblerPC, CPU, GPU, Motherboard, RAM, StorageDrive, PowerSupply, CoolingSystem, Case, \
+    TypePC
 from django.http import HttpResponse
 from rest_framework import viewsets
 from configurator.serializers import CpuSerializer
 
 
 class HomePageView(TemplateView):
+    model = TypePC
     template_name = 'configurator/home_page.html'
 
 

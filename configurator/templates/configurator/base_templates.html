@@ -13,18 +13,17 @@
 <body>
 <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
   <div class="container-fluid">
+
     <div class="collapse navbar-collapse" id="navbarColor02">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="{% url 'computers' %}">Готовые сборки
-            <span class="visually-hidden"></span>
-          </a>
+          <a class="nav-link active" href="{% url 'computers' %}">Готовые сборки</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'home_page' %}">Сборщик ПК</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Комплектующие ПК</a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Комплектующие ПК</a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#">Процессоры</a>
             <a class="dropdown-item" href="#">Материнские платы</a>
@@ -40,6 +39,7 @@
           </div>
         </li>
       </ul>
+      <a href="{% url 'users:register' %}" class="btn btn-dark">Кабинет</a>
     </div>
   </div>
 </nav>
