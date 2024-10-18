@@ -55,3 +55,4 @@ class PCList(ListView):
     def get_ordering(self):
         ordering = self.request.GET.get('sort-by')
         return ordering
+    paginate_by = 9
