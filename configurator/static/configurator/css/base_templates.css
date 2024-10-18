@@ -42,3 +42,12 @@ div.card.mb-3 {
     max-width: 250px;
 }
 
+.login-form {
+    display: flex;
+    justify-content: center;
+}
+
+.login-btn {
+    margin: 10px;
+    width: 55%
+}
