@@ -50,10 +50,4 @@ class ApiCpuViewSet(viewsets.ModelViewSet):
 class PCList(ListView):
     model = AssemblerPC
     template_name = 'configurator/PCList.html'
-    paginate_by = 9
-
-
-class showlist(listview):
-    model = AssemblerPC
-    template_name = 'configurator/showlistPC.html'
-    * = AssemblerPC.objects.select_related('name', 'cpu', 'gpu', 'motherboard', 'ram', 'power_supply', 'prize_all')
+    paginate_by = 2
