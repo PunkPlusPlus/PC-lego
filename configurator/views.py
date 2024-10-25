@@ -1,6 +1,6 @@
 from django.views.generic import TemplateView, FormView, ListView
 from django.contrib import messages
-from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth import update_session_auth_hash, authenticate, login
 from django.contrib.auth.forms import PasswordChangeForm
 from django.shortcuts import render, redirect
 from .forms import ConfiguratorForm
@@ -74,7 +74,6 @@ class PCList(ListView):
     def get_ordering(self):
         ordering = self.request.GET.get('sort-by')
         return ordering
-    paginate_by = 9
 
 
 def change_password(request):
