@@ -26,6 +26,17 @@ main {
     max-width: 250px;
 }
 
+
+.login-form {
+    display: flex;
+    justify-content: center;
+}
+
+.login-btn {
+    margin: 10px;
+    width: 55%
+}
+
 .form {
     max-width: 600px;
     margin: 0 auto;
