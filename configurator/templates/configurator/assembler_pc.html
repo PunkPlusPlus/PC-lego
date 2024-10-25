@@ -1,23 +1,23 @@
-{% extends 'configurator/base_templates.html' %}
+{% extends 'base_templates.html' %}
 {% load static %}
 
 {% block title %}Сборщик ПК{% endblock %}
 
 {% block content %}
-    <div class="list-group">
-        <h1>Сборка ПК</h1><br>
-        <form method="post">
-            {% csrf_token %}
-            {% for f in form %}
-                <div class="form-group">
-                    <label class="form-label">{{ f.label }}</label>
+    <h1>Сборка ПК</h1><br>
+    <form class="form" method="post">
+        {% csrf_token %}
+        {% for f in form %}
+            <div class="pc-form-row">
+                <label class="pc-form-label">{{ f.label }}</label>
+                <div class="pc-form-field">
                     {{ f }}
                 </div>
-            {% endfor %}
-            <button type="submit" class="btn btn-secondary">Добавить сборку</button>
-            <button type="reset" class="btn btn-light">Сбросить</button>
-        </form>
-    </div>
+            </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-secondary">Добавить сборку</button>
+        <button type="reset" class="btn btn-light">Сбросить</button>
+    </form>
     <script src="{% static 'configurator/js/type_pc.js' %}"></script>
     <script src="{% static 'configurator/js/total_price.js' %}"></script>
 {% endblock %}

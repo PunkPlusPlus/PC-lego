@@ -1,17 +1,29 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic import CreateView
+from django.contrib import messages
+from django.contrib.auth import update_session_auth_hash, authenticate, login
+from django.shortcuts import render, redirect
+from .forms import RegisterUserForm
+from django.urls import reverse_lazy
 
 
-def assembly_pc(request):
-    return render(request, 'users/assembly_pc.html')
+class RegisterUser(CreateView):
+    form_class = RegisterUserForm
+    template_name = 'users/register.html'
+    success_url = reverse_lazy('login')
 
 
-def users(request):
-    return render(request, 'users/users.html')
+    def form_valid(self, form):
+        return super().form_valid(form)
 
 
-def reg_form(request):
-    username = request.POST.get('name', 'undefined')
-    email = request.POST.get('email', 'undefined')
-    password = request.POST.get('password', 'undefined')
-    return HttpResponse(f"<div>Name: {username}  Email: {email} Password: {password}<div>")
+def login_view(request):
+    if request.method == 'POST':
+        user = authenticate(request, username=request.POST['username'],
+                            password=request.POST['password'])
+        if user:
+            login(request, user)
+            messages.success(request, 'Logged in!')
+            return redirect('/')
+        else:
+            messages.error(request,'Failed(')
+    return render(request, 'login.html')

@@ -1,0 +1,22 @@
+{% extends 'base_templates.html' %}
+
+{% block title %}
+Регистрация
+{% endblock %}
+
+{% block content %}
+    <h1>Регистрация</h1>
+    <form method="post">
+        {% csrf_token %}
+        {% for f in form %}
+            <div class="reg-form-row">
+                <label class="reg-form-label">{{ f.label }}</label>
+                <div class="reg-form-field">
+                    {{ f }}
+                </div>
+            </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-secondary">Регистрация</button>
+    </form>
+
+{% endblock %}

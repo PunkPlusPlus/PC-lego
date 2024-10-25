@@ -1,1 +1,16 @@
-[{"model": "configurator.typepc", "pk": 1, "fields": {"type": "Game"}}, {"model": "configurator.typepc", "pk": 2, "fields": {"type": "Office"}}]
+[
+{
+  "model": "configurator.typepc",
+  "pk": 1,
+  "fields": {
+    "type": "Game"
+  }
+},
+{
+  "model": "configurator.typepc",
+  "pk": 2,
+  "fields": {
+    "type": "Office"
+  }
+}
+]

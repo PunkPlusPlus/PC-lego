@@ -1,0 +1,57 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'configurator/css/base_templates.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="{% url 'computers' %}">Готовые сборки</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home_page' %}">Сборщик ПК</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Комплектующие ПК</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Процессоры</a>
+            <a class="dropdown-item" href="#">Материнские платы</a>
+            <a class="dropdown-item" href="#">Оперативная память</a>
+            <a class="dropdown-item" href="#">Видеокарты</a>
+            <a class="dropdown-item" href="#">Жесткие диски</a>
+            <a class="dropdown-item" href="#">Твердотельные накопители</a>
+            <a class="dropdown-item" href="#">Блоки питания</a>
+            <a class="dropdown-item" href="#">Система охлаждения</a>
+            <a class="dropdown-item" href="#">Корпуса</a>
+            <div class="dropdown-divider"></div>
+          </div>
+        </li>
+      </ul>
+      <div>
+        <button class="btn btn-secondary" href="{% url 'register' %}">Регистрация</button>
+        <button class="btn btn-light" href="{% url 'login' %}">Логин</button>
+      </div>
+    </div>
+  </div>
+</nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
+
+
+
+
+

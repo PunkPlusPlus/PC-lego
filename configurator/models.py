@@ -14,6 +14,7 @@ class CPU(models.Model):
     power = models.CharField(max_length=100, verbose_name="Энергопотребление")
     price = models.DecimalField(decimal_places=2, max_digits=8, verbose_name="Цена")
     company = models.CharField(max_length=100, verbose_name="Производитель")
+    type_pc = models.ForeignKey(TypePC, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return f'{self.name} ({self.company})'
@@ -25,6 +26,7 @@ class GPU(models.Model):
     power = models.CharField(max_length=100, verbose_name="Энергопотребление")
     price = models.DecimalField(decimal_places=2, max_digits=8, verbose_name="Цена")
     company = models.CharField(max_length=100, verbose_name="Производитель")
+    type_pc = models.ForeignKey(TypePC, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return f'{self.name} ({self.company})'
@@ -36,6 +38,7 @@ class Motherboard(models.Model):
     chipset = models.CharField(max_length=100, verbose_name="Тип чипсета")
     price = models.DecimalField(decimal_places=2, max_digits=8, verbose_name="Цена")
     company = models.CharField(max_length=100, verbose_name="Производитель")
+    type_pc = models.ForeignKey(TypePC, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return f'{self.name} ({self.company})'
@@ -47,6 +50,7 @@ class RAM(models.Model):
     type = models.CharField(max_length=100, verbose_name="Тип памяти")
     price = models.DecimalField(decimal_places=2, max_digits=8, verbose_name="Цена")
     company = models.CharField(max_length=100, verbose_name="Производитель")
+    type_pc = models.ForeignKey(TypePC, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return f'{self.name} ({self.company})'
@@ -58,6 +62,7 @@ class StorageDrive(models.Model):
     type = models.CharField(max_length=100, verbose_name="Тип накопителя")
     price = models.DecimalField(decimal_places=2, max_digits=8, verbose_name="Цена")
     company = models.CharField(max_length=100, verbose_name="Производитель")
+    type_pc = models.ForeignKey(TypePC, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return f'{self.name} ({self.company})'
@@ -68,6 +73,7 @@ class PowerSupply(models.Model):
     power = models.CharField(max_length=100, verbose_name="Энергопотребление")
     price = models.DecimalField(decimal_places=2, max_digits=8, verbose_name="Цена")
     company = models.CharField(max_length=100, verbose_name="Производитель")
+    type_pc = models.ForeignKey(TypePC, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return f'{self.name} ({self.company})'
@@ -78,6 +84,7 @@ class CoolingSystem(models.Model):
     destination = models.CharField(max_length=100, verbose_name="Назначение")
     price = models.DecimalField(decimal_places=2, max_digits=8, verbose_name="Цена")
     company = models.CharField(max_length=100, verbose_name="Производитель")
+    type_pc = models.ForeignKey(TypePC, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return f'{self.name} ({self.company})'
@@ -88,6 +95,7 @@ class Case(models.Model):
     proportions = models.CharField(max_length=100, verbose_name="Габариты")
     price = models.DecimalField(decimal_places=2, max_digits=8, verbose_name="Цена")
     company = models.CharField(max_length=100, verbose_name="Производитель")
+    type_pc = models.ForeignKey(TypePC, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return f'{self.name} ({self.company})'
