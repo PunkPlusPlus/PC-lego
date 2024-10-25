@@ -1,1 +1,62 @@
-[{"model": "configurator.motherboard", "pk": 1, "fields": {"name": "PRIME Z690M-PLUS D4", "socket": "1700", "chipset": "Intel Z690", "price": "18220.00", "company": "ASUS"}}, {"model": "configurator.motherboard", "pk": 2, "fields": {"name": "PRO Z790-P WIFI", "socket": "LGA 1700", "chipset": "Intel Z790", "price": "21990.00", "company": "MSI"}}, {"model": "configurator.motherboard", "pk": 3, "fields": {"name": "MPG X570S CARBON MAX WIFI", "socket": "AM4", "chipset": "AMD X570", "price": "30310.00", "company": "MSI"}}, {"model": "configurator.motherboard", "pk": 4, "fields": {"name": "B760 GAMING X DDR4", "socket": "LGA 1700", "chipset": "Intel B760", "price": "15540.00", "company": "Gigabyte"}}, {"model": "configurator.motherboard", "pk": 5, "fields": {"name": "B650M GAMING X AX", "socket": "AM5", "chipset": "AMD B650", "price": "20720.00", "company": "Gigabyte"}}]
+[
+{
+  "model": "configurator.motherboard",
+  "pk": 1,
+  "fields": {
+    "name": "PRIME Z690M-PLUS D4",
+    "socket": "1700",
+    "chipset": "Intel Z690",
+    "price": "18220.00",
+    "company": "ASUS",
+    "type_pc": 2
+  }
+},
+{
+  "model": "configurator.motherboard",
+  "pk": 2,
+  "fields": {
+    "name": "PRO Z790-P WIFI",
+    "socket": "LGA 1700",
+    "chipset": "Intel Z790",
+    "price": "21990.00",
+    "company": "MSI",
+    "type_pc": 1
+  }
+},
+{
+  "model": "configurator.motherboard",
+  "pk": 3,
+  "fields": {
+    "name": "MPG X570S CARBON MAX WIFI",
+    "socket": "AM4",
+    "chipset": "AMD X570",
+    "price": "30310.00",
+    "company": "MSI",
+    "type_pc": 1
+  }
+},
+{
+  "model": "configurator.motherboard",
+  "pk": 4,
+  "fields": {
+    "name": "B760 GAMING X DDR4",
+    "socket": "LGA 1700",
+    "chipset": "Intel B760",
+    "price": "15540.00",
+    "company": "Gigabyte",
+    "type_pc": 2
+  }
+},
+{
+  "model": "configurator.motherboard",
+  "pk": 5,
+  "fields": {
+    "name": "B650M GAMING X AX",
+    "socket": "AM5",
+    "chipset": "AMD B650",
+    "price": "20720.00",
+    "company": "Gigabyte",
+    "type_pc": 2
+  }
+}
+]

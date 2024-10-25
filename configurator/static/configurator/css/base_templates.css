@@ -1,33 +1,17 @@
-aside {
-    float: left;
-    background: #222;
-    width: 20%;
-    padding: 2.5%;
-    height: 100vh;
-    color: #fff;
-    border-right: 5px solid #4d4d4d;
-}
-
 main {
-    float: left;
+
     margin-top: 50px;
     text-align: center;
-    width: 75%;
-}
-
-img {
-    width: 400px;
-    float: left;
-}
-
-div.card.mb-3 {
-    width: 400px;
 }
 
 .container {
     display: flex;
     padding: 100px;
     grid-gap: 100px;
+}
+
+.card.mb-3 {
+    width: 400px;
 }
 
 .pc-list {
@@ -51,3 +35,52 @@ div.card.mb-3 {
     margin: 10px;
     width: 55%
 }
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.pc-form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.pc-form-label {
+    width: 50%;
+    max-width: 30ch;
+    text-align: left;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.pc-form-field input,
+.pc-form-field select {
+    width: 100%;
+    max-width: 50ch;
+    height: 40px;
+    font-size: 18px;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: #adb5bd;
+    border-radius: 4px;
+}
+
+.pc-form-field {
+    width: 100%;
+    max-width: 50ch;
+    padding: 8px;
+}
+
+.btn {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.btn-secondary {
+    margin-right: 15px;
+}
+

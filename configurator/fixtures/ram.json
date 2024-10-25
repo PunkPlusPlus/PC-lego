@@ -1,1 +1,62 @@
-[{"model": "configurator.ram", "pk": 1, "fields": {"name": "KF432C16RB1K2/32", "volume": "2x16Gb", "type": "DDR4", "price": "9290.00", "company": "Kingston"}}, {"model": "configurator.ram", "pk": 2, "fields": {"name": "KF560C32RSK2-32", "volume": "2x16Gb", "type": "DDR5", "price": "13990.00", "company": "Kingston"}}, {"model": "configurator.ram", "pk": 3, "fields": {"name": "KF432C16BBK2/16", "volume": "2x8Gb", "type": "DDR4", "price": "4750.00", "company": "Kingston"}}, {"model": "configurator.ram", "pk": 4, "fields": {"name": "BL2K8G32C16U4R", "volume": "2x8Gb", "type": "DDR4", "price": "5990.00", "company": "Crucial Ballistix"}}, {"model": "configurator.ram", "pk": 5, "fields": {"name": "F4-3600C18D-32GTZR", "volume": "2x16Gb", "type": "DDR4", "price": "10040.00", "company": "G.Skill Trident"}}]
+[
+{
+  "model": "configurator.ram",
+  "pk": 1,
+  "fields": {
+    "name": "KF432C16RB1K2/32",
+    "volume": "2x16Gb",
+    "type": "DDR4",
+    "price": "9290.00",
+    "company": "Kingston",
+    "type_pc": 2
+  }
+},
+{
+  "model": "configurator.ram",
+  "pk": 2,
+  "fields": {
+    "name": "KF560C32RSK2-32",
+    "volume": "2x16Gb",
+    "type": "DDR5",
+    "price": "13990.00",
+    "company": "Kingston",
+    "type_pc": 1
+  }
+},
+{
+  "model": "configurator.ram",
+  "pk": 3,
+  "fields": {
+    "name": "KF432C16BBK2/16",
+    "volume": "2x8Gb",
+    "type": "DDR4",
+    "price": "4750.00",
+    "company": "Kingston",
+    "type_pc": 2
+  }
+},
+{
+  "model": "configurator.ram",
+  "pk": 4,
+  "fields": {
+    "name": "BL2K8G32C16U4R",
+    "volume": "2x8Gb",
+    "type": "DDR4",
+    "price": "5990.00",
+    "company": "Crucial Ballistix",
+    "type_pc": 2
+  }
+},
+{
+  "model": "configurator.ram",
+  "pk": 5,
+  "fields": {
+    "name": "F4-3600C18D-32GTZR",
+    "volume": "2x16Gb",
+    "type": "DDR4",
+    "price": "10040.00",
+    "company": "G.Skill Trident",
+    "type_pc": 1
+  }
+}
+]
