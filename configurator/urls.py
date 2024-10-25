@@ -9,7 +9,6 @@ urlpatterns = [
     path('home_page/', views.HomePageView.as_view(), name='home_page'),
     path('assemblerPC/', views.AssemblerPCView.as_view(), name='assembler_PC'),
     path('computers/', views.PCList.as_view(), name='computers'),
-    path('users/', include('users.urls')),
     path('api/price', views.get_price),
     path('api/', include(router.urls)),
 ]
