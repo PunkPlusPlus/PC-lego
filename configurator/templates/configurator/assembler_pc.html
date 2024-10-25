@@ -1,11 +1,11 @@
-{% extends 'configurator/base_templates.html' %}
+{% extends 'base_templates.html' %}
 {% load static %}
 
 {% block title %}Сборщик ПК{% endblock %}
 
 {% block content %}
     <h1>Сборка ПК</h1><br>
-    <form method="post">
+    <form class="form" method="post">
         {% csrf_token %}
         {% for f in form %}
             <div class="pc-form-row">

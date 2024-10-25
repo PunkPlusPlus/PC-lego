@@ -26,12 +26,19 @@ main {
     max-width: 250px;
 }
 
-form {
+.form {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+
 }
 
 .pc-form-row {
@@ -75,3 +82,33 @@ form {
     margin-right: 15px;
 }
 
+.reg-form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.reg-form-label {
+    width: 35%;
+    text-align: left;
+    margin-right: 15px;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.reg-form-field input {
+    width: 80%;
+    max-width: 50ch;
+    height: 35px;
+    font-size: 18px;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: #adb5bd;
+    border-radius: 4px;
+}
+
+.reg-form-field {
+    width: 80%;
+    max-width: 50ch;
+    padding: 8px;
+}

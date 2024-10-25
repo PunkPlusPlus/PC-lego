@@ -14,7 +14,6 @@
 <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
   <div class="container-fluid">
 
-    <div class="collapse navbar-collapse" id="navbarColor02">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
           <a class="nav-link active" href="{% url 'computers' %}">Готовые сборки</a>
@@ -35,11 +34,13 @@
             <a class="dropdown-item" href="#">Система охлаждения</a>
             <a class="dropdown-item" href="#">Корпуса</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
           </div>
         </li>
       </ul>
-
+      <div>
+        <button class="btn btn-secondary" href="{% url 'register' %}">Регистрация</button>
+        <button class="btn btn-light" href="#">Логин</button>
+      </div>
     </div>
   </div>
 </nav>

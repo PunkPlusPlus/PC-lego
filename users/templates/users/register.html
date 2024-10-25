@@ -1,4 +1,4 @@
-{% extends 'configurator/base_templates.html' %}
+{% extends 'base_templates.html' %}
 
 {% block title %}
 Регистрация
@@ -9,11 +9,14 @@
     <form method="post">
         {% csrf_token %}
         {% for f in form %}
-
-        <p><label class="form-label">{{ f.label }}:</label>{{ f }}</p>
-        <div class="form-error">{{ f.errors }}</div>
+            <div class="reg-form-row">
+                <label class="reg-form-label">{{ f.label }}</label>
+                <div class="reg-form-field">
+                    {{ f }}
+                </div>
+            </div>
         {% endfor %}
-        <button type="submit">Регистрация</button>
+        <button type="submit" class="btn btn-secondary">Регистрация</button>
     </form>
 
 {% endblock %}
