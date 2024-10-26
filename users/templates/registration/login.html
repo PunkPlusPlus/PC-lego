@@ -1,4 +1,4 @@
-{% extends 'configurator/base_templates.html' %}
+{% extends 'base_templates.html' %}
 {% load static %}
 
 {% block title %}
@@ -11,13 +11,21 @@ Login
         {% csrf_token %}
         <div>
           <label for="InputUsername" class="form-label mt-4">Username</label>
-          <input type="text" class="form-control" id="InputUsername" placeholder="Enter username">
+          <input type="text" name="username" class="form-control" id="InputUsername" placeholder="Enter username">
         </div>
         <div>
           <label for="exampleInputPassword1" class="form-label mt-4">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
+          <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
         </div>
         <button type="submit" class="btn btn-success login-btn">Log In</button>
     </form>
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
 </div>
 {% endblock %}

@@ -26,4 +26,4 @@ def login_view(request):
             return redirect('/')
         else:
             messages.error(request,'Failed(')
-    return render(request, 'login.html')
+    return render(request, 'registration/login.html')
