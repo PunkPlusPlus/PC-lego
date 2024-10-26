@@ -2,9 +2,10 @@ from django.views.generic import TemplateView, FormView, ListView
 from .forms import ConfiguratorForm
 from django.urls import reverse_lazy
 from configurator.models import AssemblerPC, CPU, GPU, Motherboard, RAM, StorageDrive, PowerSupply, CoolingSystem, Case
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpRequest
 from rest_framework import viewsets
 from configurator.serializers import CpuSerializer
+from django.shortcuts import render
 
 
 class HomePageView(TemplateView):
@@ -52,6 +53,11 @@ class PCList(ListView):
     template_name = 'configurator/PCList.html'
     paginate_by = 2
 
-class showlist(listview):
-    model = AssemblerPC
-    * = AssemblerPC.objects.select_related('name', 'cpu', 'gpu', 'motherboard', 'ram', 'power_supply', 'prize_all')
+
+def show_list(request: HttpRequest, id: int):
+    assembly = AssemblerPC.objects.select_related('cpu', 'gpu', 'motherboard', 'ram', 'power_supply', 'cooling_system', 'storage_drive', 'case').get(id=id)
+    return render(request, 'configurator/showlistPC.html', {'assembly': assembly})
+# class ShowList(ListView):
+#     model = AssemblerPC
+#     template_name = 'configurator/showlistPC.html'
+#     #* = AssemblerPC.objects.select_related('name', 'cpu', 'gpu', 'motherboard', 'ram', 'power_supply', 'prize_all')
