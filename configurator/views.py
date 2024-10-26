@@ -51,3 +51,7 @@ class PCList(ListView):
     model = AssemblerPC
     template_name = 'configurator/PCList.html'
     paginate_by = 2
+
+class showlist(listview):
+    model = AssemblerPC
+    * = AssemblerPC.objects.select_related('name', 'cpu', 'gpu', 'motherboard', 'ram', 'power_supply', 'prize_all')
