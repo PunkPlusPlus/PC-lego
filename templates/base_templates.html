@@ -38,8 +38,13 @@
         </li>
       </ul>
       <div>
-        <a class="btn btn-secondary" href="{% url 'register' %}">Регистрация</a>
-        <a class="btn btn-light" href="{% url 'login' %}">Логин</a>
+        {% if request.user.is_authenticated %}
+          Привет {{ request.user.username }}!
+          <a class="btn btn-light" href="{% url 'logout' %}">Logout</a>
+        {% else %}
+          <a class="btn btn-secondary" href="{% url 'register' %}">Регистрация</a>
+          <a class="btn btn-light" href="{% url 'login' %}">Login</a>
+        {% endif %}
       </div>
     </div>
   </div>
