@@ -1,0 +1,101 @@
+{% extends 'configurator/base_templates.html' %}
+
+{% load static %}
+
+{% block title %}
+Готовые сборки ПК
+{% endblock %}
+
+{% block content %}
+<h2>Сборка №{{ assembly.id }}</h2>
+
+<section class="wrapper">
+    <!-- Row title -->
+    <main>
+      <ul>
+          <li><span class="title-hide">#</span> Данная сборка состоит из (кол-во) комплектующих</li>
+      </ul>
+    </main>
+   <!-- Row 1 -->
+   <article>
+       <ul>
+           <li><a>Процессор</a></li>
+           <li>{{ assembly.cpu }}</li>
+       </ul>
+       <ul class="more-content">
+           <li>text text text</li>
+       </ul>
+   </article>
+   <!-- Row 2 -->
+   <article>
+       <ul>
+           <li><a>Материнская плата</a></li>
+           <li>{{ assembly.motherboard }}</li>
+       </ul>
+       <ul class="more-content">
+           <li>text text text</li>
+       </ul>
+   </article>
+   <!-- Row 3 -->
+   <article>
+       <ul>
+           <li><a>Видеокарта</a></li>
+           <li>{{ assembly.gpu }}</li>
+       </ul>
+       <ul class="more-content">
+           <li>text text text</li>
+       </ul>
+   </article>
+   <!-- Row 4 -->
+   <article>
+       <ul>
+           <li><a>Оперативная память</a></li>
+           <li>{{ assembly.ram }}</li>
+       </ul>
+       <ul class="more-content">
+           <li>text text text</li>
+       </ul>
+   </article>
+   <!-- Row 5 -->
+   <article>
+       <ul>
+           <li><a>Блок питания</a></li>
+           <li>{{ assembly.power_supply }}</li>
+       </ul>
+       <ul class="more-content">
+           <li>text text text</li>
+       </ul>
+   </article>
+   <!-- Row 6 -->
+   <article>
+       <ul>
+           <li><a>Носитель</a></li>
+           <li>{{ assembly.storage_drive }}</li>
+       </ul>
+       <ul class="more-content">
+           <li>text text text</li>
+       </ul>
+   </article>
+   <!-- Row 7 -->
+   <article>
+       <ul>
+           <li><a>Система охлаждения</a></li>
+           <li>{{ assembly.cooling_system }}</li>
+       </ul>
+       <ul class="more-content">
+           <li>text text text</li>
+       </ul>
+   </article>
+   <!-- Row 8 -->
+   <article>
+       <ul>
+           <li><a>Корпус</a></li>
+           <li>{{ assembly.case }}</li>
+       </ul>
+       <ul class="more-content">
+           <li>text text text</li>
+       </ul>
+   </article>
+</section>
+
+
