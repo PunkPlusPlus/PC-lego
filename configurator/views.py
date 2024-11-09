@@ -32,10 +32,19 @@ class AssemblerPCView(FormView):
         return form
 
     def form_valid(self, form):
-        return super().form_valid(form)
+        if self.request.user.is_authenticated:
+            form.save()
+            return super().form_valid(form)
+        else:
+            return self.render_to_response(self.get_context_data(show_modal=True))
 
     def form_invalid(self, form):
-        pass
+        return self.render_to_response(self.get_context_data(form=form))
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['show_modal'] = kwargs.get('show_modal', False)
+        return context
 
 
 def get_price(request):
